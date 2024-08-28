@@ -8,7 +8,7 @@ This is a free for now hack for evoworld.io game.
 - 2nd step. Download code how a zip archive.
 - 3rd step. Unzip code in any free folder.
 - 4th step. Open the tampermonkey control panel (click on extension icon in extensions menu and click to "Control panel").
-- 5th step. Move the file in tampermonkey control panel.
+- 5th step. Move the file "main.js" in tampermonkey control panel.
 - 6th step. Click "Install/Reinstall/Update" button.
 - 7th step. Open the game.
 - 8th step. Read the alerts wich on your screen at the top and press Ok or Cancel.
