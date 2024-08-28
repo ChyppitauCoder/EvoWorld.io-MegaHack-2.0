@@ -32,344 +32,36 @@
 // @author       ChyppitauCoder
 // @match        https://evoworld.io/
 // @icon         https://steamuserimages-a.akamaihd.net/ugc/2044108148224666217/6A44151F7534306FEC8259BDE5496463C9B55720/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true
-// @grant        none
+// @grant        GM_xmlhttpRequest
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
 // @license      MIT
 // ==/UserScript==
 
-let overlay = `
-<div class="main-hack">
-    <style>
+let overlay = '';
+let url = 'https://raw.githubusercontent.com/ChyppitauCoder/EvoWorld.io-MegaHack-2.0/main/MegaHack.html';
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-    .cheatMenu {
-        font-family: 'Gill Sans', 'Montserrat', 'Trebuchet MS', sans-serif;
-        font-size: 23px;
-        color: #fff;
-        position: absolute;
-        z-index: 9999;
-        transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
-        opacity: 1;
-        width: 60%;
-        height: 110%;
-        overflow-y: auto;
-    }
-
-    input[type="text"],
-    select {
-        width: 100%;
-        padding: 5px;
-        margin-bottom: 10px;
-    }
-
-    .cheatMenu.show {
-        opacity: 1;
-        width: 110%;
-        height: 85%;
-    }
-
-    .little-text-in-the-hack-chyppitau {
-        font-size: 10px;
-        opacity: 0.4;
-        font-family: Calibri;
-        color: white-smoke;
-    }
-
-    .main-hack {
-        margin: 0;
-        position: absolute;
-        z-index: 9999;
-    }
-
-    .hack-main-section {
-        margin: 20px;
-        display: flex;
-        flex-direction: row-reverse;
-        margin: 0;
-        flex-wrap: wrap;
-    }
-
-    .rand-hack,
-    .another-softwere-hack,
-    .cosmetic-hack,
-    .how-to-hack,
-    .visual-hack,
-    .keybind-hack,
-    .emoji-hack,
-    .MegaHack-settings-hack,
-    .Chyppitau-theme-manager {
-        padding: 10px;
-        border: 3px solid #8a2be2;
-        background-color: #9370db;
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 auto;
-        margin: 10px;
-    }
-
-    .another-softwere-hack .title-2 h1 {
-        font-size: 20px;
-    }
-
-    .another-softwere-hack {
-        font-size: 10px;
-    }
-
-    hr {
-        color: black;
-    }
-
-    .hack-main-section button {
-        border: 1px solid #fff;
-        border-radius: 4px;
-        padding: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: .3s linear;
-        color: #fff;
-        position: relative;
-        overflow: hidden;
-        background-color: #7B68EE;
-        margin: 2px;
-        width: 140px;
-        height: 23px;
-    }
-    
-    button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 3px;
-        background-color: #2E8B57;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        opacity: 0;
-    }
-
-    button.active::before {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-
-    button:hover {
-        background-color: #8a2be2;
-    }
-    button:active {
-        font-size: 30px;
-        color: white;
-    }
-
-    .hack-main-section>div {
-        flex: 1 1 auto;
-        min-width: 200px;
-        max-width: calc(100% - 20px);
-    }
-
-    @media (max-width: 1928px) {
-        .cheatMenu {
-            width: 70%;
-            height: 85%;
+GM_xmlhttpRequest({
+    method: "GET",
+    url: url,
+    onload: function(response) {
+        if (response.status === 200) {
+            overlay = response.responseText;
+            console.log('HTML content loaded:', overlay);
+            if (confirm('are you sure want to run a script?')){
+                main();
+            } else {
+                if (confirm('maybe you run script with no ban advice?')) {
+                    alert('than use just hotkeys, cosmetic and visual hacks in this script. +advice');
+                    if (confirm('Are you sure want to run this script with no ban advice?')){
+                        main();
+                    }
+                }
+            }
+        } else {
+            console.error('Failed to load HTML content:', response.statusText);
         }
     }
-
-    @media (max-width: 1020px) {
-        .cheatMenu {
-            width: 90%;
-            height: 90%;
-        }
-    }
-
-    </style>
-    <div id="box-hack">
-        <div class="cheatMenu" id="cheatMenu">
-            <section class="hack-main-section">
-                <div class="how-to-hack" id="how-to-hack">
-                    <div class="title">
-                        <p>MegaHack v2.0</p>
-                        <hr>
-                        <p id="chyppitau_license">License: </p>
-                        <hr>
-                    </div>
-
-                    <button id="my-another-hacks" class="another-hacks">my other hacks</button>
-                    <p class="little-text-in-the-hack-chyppitau" id="little-text-in-the-hack-chyppitau">To use all functions witch don't click and has low opacity you need to have license: Most up. Full license get in my Discord server. Instruction in this discord server too.</p>
-                    <p>
-                    <input type="text" id="search-for-hacks-hack" placeholder="Search hacks..." onkeyup="
-                        let input = this.value.toLowerCase();
-                        let buttons = document.querySelectorAll('.hack-main-section button');
-                        
-                        buttons.forEach(button => {
-                            if (button.innerText.toLowerCase().includes(input)) {
-                                button.style.opacity = 1;
-                            } else {
-                                button.style.opacity = 0.3;
-                            }
-                        });
-                    ">
-                </div>
-
-                <div class="rand-hack" id="rand-hack">
-                    <div class="title">
-                        <h1>Core</h1>
-                        <hr>
-                    </div>
-                    <form>
-                        <select name="Leaderboard-nicknames" id="leaderboard-nicknames">
-                        <option value="-">-- nicknames --</option>
-                        <option value="1">top 1</option>
-                        <option value="2">top 2</option>
-                        <option value="3">top 3</option>
-                        <option value="4">top 4</option>
-                        <option value="5">top 5</option>
-                        <option value="6">top 6</option>
-                        <option value="7">top 7</option>
-                        <option value="8">top 8</option>
-                        <option value="9">top 9</option>
-                        <option value="10">top 10</option>
-                        </select>
-                    </form>
-                    <button id="copy-player-nick-hack">Copy</button>
-                    <p style="margin: 6px;"></p>
-
-                    <button id="reload-hack">reload</button>
-                    <button id="fps-bypass-hack">Fps Bypass</button>
-                    <button id="use-skill-hack" onclick="if (able_to_click){skillUse()}">Use Your Skill</button>
-                    <button id="night-k-hack">Night Vision</button>
-                    <button id="exit-game-hack">exit game</button>
-                    <button id="inject-hack">open hacks</button>
-                    <button id="show-codes-hack">show codes</button>
-                    <button id="xp-hack">enable xp bonus</button>
-                    <button id="scan-players-hack">Scan players</button>
-                    <button id="auto-respawn-hack">Play again</button>
-                    <button id="play-again-hack">Auto-respawn</button>
-                    <button id="adblock-detect-bypass-hack">Anti-adblock bypass</button>
-                    <hr>
-                    <p>AutoClicker</p>
-                    <label for="clicksPerSecond">Clicks per second:</label>
-                    <input type="number" id="clicksPerSecond" value="10" min="1" max="100">
-                    <button id="startAutoClicker">Start Auto Clicker</button>
-                    <button id="stopAutoClicker">Stop Auto Clicker</button>
-                </div>
-                <div class="another-softwere-hack" id="another-softwere-hack">
-                    <div class="title">
-                        <h1>From Other Scripts</h1>
-                        <hr>
-                    </div>
-
-                    <button id="unlock-zoom-hack">unlock zoom</button>
-                    <button id="dont-hide-players-hack">No Hide player</button>
-
-                </div>
-
-                <div class="cosmetic-hack" id="cosmetic-hack">
-                    <div class="title">
-                        <h1>Cosmetic</h1>
-                        <hr>
-                    </div>
-
-                    <button id="enter-title-hack">chose title</button>
-                    <button id="no-ads">No ads</button>
-                    <button id="print-scr-hack">screenshot</button>
-                    <button id="show-label-hack">Show Label</button>
-                    <button id="del-label-hack">Delete Label</button>
-                    <button id="height-hack-hack">enter your height</button>
-                    <button id="dont-hide-me-hack">No Hide You</button>
-                </div>
-
-                <div class="visual-hack" id="visual-hack">
-                    <div class="title">
-                        <h1>Visual</h1>
-                        <hr>
-                    </div>
-
-                    <button id="sky-bs-mod-hack">sky bs mod</button>
-                    <button id="smooth-movements-hack">Smooth Movement</button>
-                    <button id="premium-hack">Unlock Premium</button>
-                    <button id="hp-hack">enter your hp</button>
-                    <button id="next-level-hack">Next Level(beta)</button>
-                    <button id="admin-hack">Admin Hack</button>
-                    <button id="any-level-hack">Unlock Level</button>
-                    <button id="pixelvoices-mod-hack">pixel voices mod</button>
-                    <button id="unlock-nick-hack">unlock nick</button>
-                    <button onclick="if (able_to_click){game.maxInterpolateDistanceTeleport = 0}">Enable Alpha NoClip</button>
-                    <button onclick="if (able_to_click){game.maxInterpolateDistanceTeleport = 350}">Disable NoClip</button>
-                </div>
-
-                <div class="emoji-hack" id="emoji-hack">
-                    <div class="title">
-                        <h1>Emoji-hack</h1>
-                        <hr>
-                    </div>
-
-                    <button id="chyppitauE1">Hi</button>
-                    <button id="chyppitauE2">Hi (other)</button>
-                    <button id="chyppitauE3">bye</button>
-                    <button id="chyppitauE4">bye (other)</button>
-                    <button id="chyppitauE5">I have to go</button>
-                    <button id="chyppitauE6">Thanks!</button>
-                    <button id="chyppitauE7">I'm sorry</button>
-                    <button id="chyppitauE8">I like you</button>
-                    <button id="chyppitauE9">Dislike</button>
-                    <button id="chyppitauE10">clap</button>
-                    <button id="chyppitauE11">Sad</button>
-                    <button id="chyppitauE12">Cry</button>
-                    <button id="chyppitauE13">Broken heart</button>
-                    <button id="chyppitauE14">Heart</button>
-                    <button id="chyppitauE15">laughter</button>
-                    <button id="chyppitauE16">Skull</button>
-                    <button id="chyppitauE17">Angry</button>
-                    <button id="chyppitauE18">Like</button>
-                </div>
-
-                <div class="keybind-hack" id="keybind-hack">
-                    <div class="title">
-                        <h1>Beta Keybind</h1>
-                        <hr>
-                    </div>
-
-                    <button id="bind-hack">add keybind</button>
-                </div>
-
-                <div class="MegaHack-settings-hack" id="MegaHack-settings-hack">
-                    <div class="title">
-                        <h1>Settings</h1>
-                        <hr>
-                    </div>
-
-                    <button id="no-confirms-hack">No Confirms</button>
-                    <button id="allow-move-cheat-menu-hack">Allow move menu</button>
-                    <button id="enable-confirms-hack">Enable Confirms</button>
-                </div>
-
-                <!-- <div class="Chyppitau-theme-manager" id="Chyppitau-theme-manager">
-                    <div class="title">
-                        <h1>Theme Manager</h1>
-                        <hr>
-                    </div>
-
-                    <form>
-                        <select name="Theme-manager-chyppitau" id="Theme-manager-chyppitau">
-                        <option value="-">-- Select Theme --</option>
-                        <option value="1">Rainbow(colorful)</option>
-                        <option value="2">Mobile Edit</option>
-                        <option value="3">Old blue Theme</option>
-                        <option value="4">Art Theme</option>
-                        </select>
-                    </form>
-
-                    <button id="aply-hack-theme">Aply theme</button>
-                </div> -->
-
-            </section>
-            
-        </div>
-    </div>
-</div>
-`;
+});
 
 function main() {
     alert("Warning, you can will get banned! TO OPEN OR CLOSE MENU PRESS TAB OR F9");
@@ -383,12 +75,14 @@ function main() {
     document.body.appendChild(cheatMenu);
 
     let main_hack = cheatMenu.querySelector(".main-hack");
-    main_hack.style.width = "0%";
-    main_hack.style.height = "0%";
+
     if (!main_hack) {
         alert("Element with class 'main-hack' not found! Cheat doesn't work!");
         return;
     }
+
+    main_hack.style.width = "0%";
+    main_hack.style.height = "0%";
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Tab' || event.key === "F9") {
@@ -413,11 +107,6 @@ function main() {
             }
         }
     });
-
-    // document.body.style.position = "fixed";
-    // document.body.style.left = '0'; document.body.style.right = '0';
-    // document.body.style.top = '0'; bottom: '0';
-    // document.body.style.overflowY = "scroll";
 
     document.querySelectorAll('.hack-main-section button').forEach(button => {
         button.addEventListener('click', () => {
@@ -1423,17 +1112,6 @@ function main() {
             window.open("https://greasyfork.org/ru/users/1087245-chyppitaucoder");
         }
     });
-}
-
-if (confirm('are you sure want to run a script?')){
-    main();
-} else {
-    if (confirm('maybe you run script with no ban advice?')) {
-        alert('than use just hotkeys, cosmetic and visual hacks in this script. +advice');
-        if (confirm('Are you sure want to run this script with no ban advice?')){
-            main();
-        }
-    }
 }
 
 
