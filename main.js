@@ -14,7 +14,7 @@
 // @name:hi EvoWorld.io MEGAHACK
 // @name:tr EvoWorld.io MEGAHACK
 // @namespace    http://tampermonkey.net/
-// @version      2.0.1.0
+// @version      2.2.0.0
 // @description    Cheat for evoworld/flyordie with 25+ hacks and emoji hack mod for evoworld! The largest cheat with good and understandable code. Please support this project, I did all this ALONE! It's still a beta version.
 // @description:ru Чит для evoworld/flyordie в котором есть 25+ хаков и emoji hack мод для evoworld! Самый крупный чит с хорошим и понятным кодом. Пожалуйста, поддержите этот проект, я делал всё это В ОДИНОЧКУ! Пока это ещё beta версия.
 // @description:en Cheat for evoworld/flyordie with 25+ hacks and emoji hack mod for evoworld! The largest cheat with good and understandable code. Please support this project, I did all this ALONE! It's still a beta version.
