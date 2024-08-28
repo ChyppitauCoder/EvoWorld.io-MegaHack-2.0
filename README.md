@@ -17,3 +17,6 @@ This is a free for now hack for evoworld.io game.
 - 11th step. Congulation! This is a cheat menu! When you will open this in game just press f9 or tab and enjoy cheat!
 
 <h2>Attention! Your account can be banned! Play on your fear and risk!</h2>
+
+<p>Warning: CHROME ONLY!</p>
+<p>Warning: PC ONLY!</p>
