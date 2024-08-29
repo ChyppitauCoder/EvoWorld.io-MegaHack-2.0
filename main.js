@@ -14,7 +14,7 @@
 // @name:hi EvoWorld.io MEGAHACK
 // @name:tr EvoWorld.io MEGAHACK
 // @namespace    http://tampermonkey.net/
-// @version      2.2.0.0
+// @version      2.1.0.0
 // @description    Cheat for evoworld/flyordie with 25+ hacks and emoji hack mod for evoworld! The largest cheat with good and understandable code. Please support this project, I did all this ALONE! It's still a beta version.
 // @description:ru Чит для evoworld/flyordie в котором есть 25+ хаков и emoji hack мод для evoworld! Самый крупный чит с хорошим и понятным кодом. Пожалуйста, поддержите этот проект, я делал всё это В ОДИНОЧКУ! Пока это ещё beta версия.
 // @description:en Cheat for evoworld/flyordie with 25+ hacks and emoji hack mod for evoworld! The largest cheat with good and understandable code. Please support this project, I did all this ALONE! It's still a beta version.
@@ -29,7 +29,7 @@
 // @description:ar غش ل evoworld/flyordie مع أكثر من 25 اختراقات و mod اختراق emoji ل evoworld! أكبر غش مع كود جيد ومفهوم. يرجى دعم هذا المشروع، لقد فعلت كل هذا وحدي! لا يزال في النسخة التجريبية.
 // @description:hi evoworld/flyordie के लिए 25+ हैक्स और evoworld के लिए इमोजी हैक मोड के साथ चीट! अच्छे और समझने योग्य कोड के साथ सबसे बड़ा चीट। कृपया इस परियोजना का समर्थन करें, मैंने यह सब अकेले किया है! यह अभी भी एक बीटा संस्करण है.
 // @description:tr evoworld/flyordie için 25'ten fazla hack ve evoworld için emoji hack modu içeren hile! İyi ve anlaşılır kodla en büyük hile. Lütfen bu projeyi destekleyin, bunu TEK BAŞIMA yaptım! Hala bir beta sürümüdür.
-// @author       ChyppitauCoder
+// @author       ChyppitauCoder & AlvaroBoy
 // @match        https://evoworld.io/
 // @icon         https://steamuserimages-a.akamaihd.net/ugc/2044108148224666217/6A44151F7534306FEC8259BDE5496463C9B55720/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true
 // @grant        GM_xmlhttpRequest
