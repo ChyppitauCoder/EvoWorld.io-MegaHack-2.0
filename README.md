@@ -18,11 +18,17 @@ This is a free for now hack for evoworld.io game.
 
 <h2>Support me of any amount:</h2>
 <h3> UQC2t9bPwMTvB9RBfJV0QDdaIAXZpfFnW2zlTGn4dsJvymMs (My TON space)</h3>
+<h3>https://www.donationalerts.com/r/ChyppitauZ (My DonationAlerts)</h3>
 
-<h3>only in $TON crypto valute. </h3>
-<h3>Open telegram crypto wallet (if you haven't him just find guides on this topic how registrate telegram crypto wallet) and press send, in opened page select external and press next. When open the page with crypto valute names select $TON and paste in input field on new page my address (copy him before sending). If you can't send $TON to my crypto wallet write me in discord in private messages (@ChyppitauZ). I help you. </h3>
-<h3></h3>
-<h3>P. S. If you don't have a $TON just buy it in P2P market. You can will find many guides on this topic.</h3>
+<br>In crypto valute or DonationAlerts.</br>
+
+<i>Crypto valute instruction: </i>
+<i><li>Open telegram crypto wallet (if you haven't him just find guides on this topic how registrate telegram crypto wallet) and press send, in opened page select external and press next. When open the page with crypto valute names select $TON and paste in input field on new page my address (copy him - -before sending). If you can't send $TON to my crypto wallet write me in private messages. I help you.</li></i>
+
+<li>P. S. If you don't have a $TON just buy it in P2P market. You can will find many guides on this topic.</li>
+
+<i>DonationAlerts instruction:
+<li>Open link and send any sum. Its easy, but using this you are putting the author in jail.</li></i>
 
 <h2>Attention! Your account can be banned! Play on your fear and risk!</h2>
 
