@@ -33,6 +33,7 @@
 // @match        https://evoworld.io/
 // @icon         https://steamuserimages-a.akamaihd.net/ugc/2044108148224666217/6A44151F7534306FEC8259BDE5496463C9B55720/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true
 // @grant        GM_xmlhttpRequest
+// @contributionURL https://www.donationalerts.com/r/ChyppitauZ
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
 // @license      MIT
 // ==/UserScript==
