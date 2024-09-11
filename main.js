@@ -928,11 +928,11 @@ function main() {
             // }, 250);
 
             // if (joinedGame && imDead){
-            //     playAgain();
+            playAgain();
             //     clearInterval(i_am_dead_interval);
             // }
 
-            alert("this works only when you died.")
+            alert("this works only when you died.");
         }
     });
 
