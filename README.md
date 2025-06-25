@@ -22,14 +22,6 @@ This is a free for now hack for evoworld.io game.
 
 <br>In crypto valute or DonationAlerts.</br>
 
-<i>Crypto valute instruction: </i>
-<i><li>Open telegram crypto wallet (if you haven't him just find guides on this topic how registrate telegram crypto wallet) and press send, in opened page select external and press next. When open the page with crypto valute names select $TON and paste in input field on new page my address (copy him - -before sending). If you can't send $TON to my crypto wallet write me in private messages. I help you.</li></i>
-
-<li>P. S. If you don't have a $TON just buy it in P2P market. You can will find many guides on this topic.</li>
-
-<i>DonationAlerts instruction:
-<li>Open link and send any sum. Its easy, but using this you are putting the author in jail.</li></i>
-
 <h2>Attention! Your account can be banned! Play on your fear and risk!</h2>
 
 <p>Warning: CHROME ONLY!</p>
