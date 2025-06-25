@@ -2,7 +2,7 @@
 This is a free for now hack for evoworld.io game.
 <p>Soon this will be paid hack</p>
 
-<h1>How to use?</h1>
+<h1>How to install & use</h1>
 
 - 1st step. Download <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">tampermonkey</a>
 - 2nd step. Download code how a zip archive.
