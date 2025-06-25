@@ -17,7 +17,7 @@ This is a free for now hack for evoworld.io game.
 - 11th step. Enjoy!
 
 <h2>Support me of any amount:</h2>
-<h3> UQC2t9bPwMTvB9RBfJV0QDdaIAXZpfFnW2zlTGn4dsJvymMs (My TON space)</h3>
+<h3> UQC2t9bPwMTvB9RBfJV0QDdaIAXZpfFnW2zlTGn4dsJvymMs (TON)</h3>
 <h3>https://www.donationalerts.com/r/ChyppitauZ (My DonationAlerts)</h3>
 
 <br>In crypto valute or DonationAlerts.</br>
