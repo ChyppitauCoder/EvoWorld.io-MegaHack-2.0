@@ -17,8 +17,8 @@ This is a free & open-source hack
 - 11th step. Enjoy!
 
 <h2>Support me of any amount:</h2>
-<h3> UQC2t9bPwMTvB9RBfJV0QDdaIAXZpfFnW2zlTGn4dsJvymMs (TON)</h3>
-<h3>https://www.donationalerts.com/r/ChyppitauZ (DonationAlerts)</h3>
+<h3> UQC2t9bPwMTvB9RBfJV0QDdaIAXZpfFnW2zlTGn4dsJvymMs (TON Cryptocurrency)</h3>
+<h3>https://www.donationalerts.com/r/ChyppitauZ (Fiat)</h3>
 
 <p>Warning: CHROME ONLY!</p>
 <p>Warning: PC ONLY!</p>
