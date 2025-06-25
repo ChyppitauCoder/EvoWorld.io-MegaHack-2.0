@@ -1,5 +1,5 @@
 # EvoWorld.io-MegaHack-2.2.0
-This is a free for now hack for evoworld.io game.
+This is a free & open-source hack
 <h2>Attention! Your account can be banned! Play on your fear and risk!</h2>
 
 <h1>How to install & use</h1>
