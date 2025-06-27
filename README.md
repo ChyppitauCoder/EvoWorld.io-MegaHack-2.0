@@ -5,7 +5,7 @@ This is a free & open-source hack
 <h1>How to install & use</h1>
 
 - 1st step. Download <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">tampermonkey</a>
-- 2nd step. Turn on developer mode in chrome extension manager.
+- 2nd step. Enable developer mode in chrome extension manager.
 - 3rd step. Download code as a zip archive.
 - 4th step. Unzip code into any folder.
 - 5th step. Open tampermonkey's control panel.
